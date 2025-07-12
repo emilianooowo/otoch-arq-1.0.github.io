@@ -274,7 +274,6 @@ header {
 .hero-btn-contact {
     background: transparent;
     color: #000;
-    text-shadow: 0 2px 8px rgba(255, 255, 255);
     border: 2px solid transparent;
     position: relative;
 }
