@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otoch Arquitectos</title>
+    <link rel="shortcut icon" href="assets/logos/logo-icono.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="shared/global.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="index.html">Inicio</a>
+            <a href="">Servicios</a>
+            <a href=""> Residencias</a>
+            <a href=""> Contacto</a>
+
+            <div class="mobile-social-separator"></div>
+
+            <div class="mobile-social-links">
+                <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-main">
+            <div class="logo-header">
+                <a href="index.html">
+                    <img src="assets/logos/logo-header.jpg" alt="Funeraria Logo">
+                </a>
+            </div>
+
+            <nav>
+                <button class="menu-pc-toggle" id="menuToggle">
+                    <span class="menu-pc-bar"></span>
+                    <span class="menu-pc-bar"></span>
+                    <span class="menu-pc-bar"></span>
+                </button>
+
+                <div class="menu-pc-dropdown" id="menuDropdown">
+                    <ul class="menu-pc-list">
+                        <li class="menu-pc-item"><a href="index.html" class="menu-pc-link">Inicio</a></li>
+                        <li class="menu-pc-item"><a href="" class="menu-pc-link">Servicios</a></li>
+                        <li class="menu-pc-item"><a href="" class="menu-pc-link">Residencias</a>
+                        </li>
+                        <li class="menu-pc-item"><a href="" class="menu-pc-link">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image">
+            <img src="assets/02.jpg" alt="Construcción profesional">
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">Construcciones de Calidad</h1>
+
+            <p class="hero-description">
+                Transformamos tus ideas en realidad con más de 15 años de experiencia en el sector de la construcción.
+                Ofrecemos servicios integrales desde la planificación hasta la entrega final de tu proyecto.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#contacto" class="hero-btn hero-btn-contact">Contactar</a>
+                <a href="#proyectos" class="hero-btn hero-btn-projects">Ver Proyectos</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="servicios-section">
+        <div class="servicios-header">
+            <h2 class="servicios-titulo">Servicios</h2>
+            <p class="servicios-descripcion">
+                Nuestro trabajo se desarrolla en tres etapas que transforman tu idea en un proyecto arquitectónico
+                integral.
+            </p>
+        </div>
+
+        <div class="servicios-cards">
+            <div class="servicios-card servicios-card-lateral">
+                <div class="servicios-icono">
+                    <img src="assets/proyectos.png" alt="Proyecto Arquitectónico">
+                </div>
+                <h3 class="servicios-card-titulo">Proyecto Arquitectónico</h3>
+                <p class="servicios-card-descripcion">
+                    Levantamiento del terreno y propuesta inicial basada en tus necesidades.
+                </p>
+                <a href="#" class="btn-cta">Más Información</a>
+
+                <div class="servicios-hover-message">
+                    <p class="hover-mensaje">
+                        Ideal para quienes tienen un terreno y necesitan comenzar desde cero con el diseño de su
+                        proyecto.
+                    </p>
+                    <div class="progress-container">
+                        <div class="progress-label">Progreso del Proyecto</div>
+                        <div class="progress-bar">
+                            <div class="progress-step active"></div>
+                            <div class="progress-step"></div>
+                            <div class="progress-step"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="servicios-card servicios-card-centro">
+                <div class="servicios-icono">
+                    <img src="assets/comunidad.png" alt="Proyecto Ejecutivo">
+                </div>
+                <h3 class="servicios-card-titulo">Proyecto Ejecutivo</h3>
+                <p class="servicios-card-descripcion">
+                    Definimos estructuras, instalaciones y acabados del proyecto final.
+                </p>
+                <a href="#" class="btn-cta">Más Información</a>
+
+                <div class="servicios-hover-message">
+                    <p class="hover-mensaje">
+                        Perfecto para quienes ya tienen el diseño aprobado y necesitan los planos técnicos para
+                        construir.
+                    </p>
+                    <div class="progress-container">
+                        <div class="progress-label">Progreso del Proyecto</div>
+                        <div class="progress-bar">
+                            <div class="progress-step active"></div>
+                            <div class="progress-step active"></div>
+                            <div class="progress-step"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="servicios-card servicios-card-lateral">
+                <div class="servicios-icono">
+                    <img src="assets/a_d.png" alt="Presupuesto y Contrato">
+                </div>
+                <h3 class="servicios-card-titulo">Presupuesto Y Contrato de obra</h3>
+                <p class="servicios-card-descripcion">
+                    Detallamos los conceptos del proyecto y los ajustamos a tu presupuesto.
+                </p>
+                <a href="#" class="btn-cta">Más Información</a>
+
+                <div class="servicios-hover-message">
+                    <p class="hover-mensaje">
+                        Para quienes tienen planos ejecutivos listos y necesitan costear y ejecutar la construcción.
+                    </p>
+                    <div class="progress-container">
+                        <div class="progress-label">Progreso del Proyecto</div>
+                        <div class="progress-bar">
+                            <div class="progress-step active"></div>
+                            <div class="progress-step active"></div>
+                            <div class="progress-step active"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="extras-section">
+        <div class="extras-container">
+            <div class="extras-header">
+                <h3 class="extras-title">Servicios Extras</h3>
+            </div>
+
+            <div class="extras-grid">
+                <div class="extras-item">
+                    <h3 class="extras-subtitle">Asesorías</h3>
+                    <p class="extras-description">
+                        Brindamos orientación profesional para tomar decisiones informadas en cada etapa de tu proyecto.
+                    </p>
+                </div>
+
+                <div class="extras-item">
+                    <h3 class="extras-subtitle">Créditos Inmobiliarios</h3>
+                    <p class="extras-description">
+                        Te guiamos en el proceso de obtención de financiamiento para que puedas hacer realidad tu
+                        proyecto de vivienda.
+                    </p>
+                </div>
+
+                <div class="extras-item">
+                    <h3 class="extras-subtitle">Inversión Inmobiliaria</h3>
+                    <p class="extras-description">
+                        Te asesoramos en oportunidades de inversión en bienes raíces para optimizar tu capital con
+                        proyectos rentables.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="proyectos-section">
+        <div class="proyectos-titulo-container">
+            <h2 class="proyectos-titulo">Proyectos</h2>
+            <a href="#" class="btn-cta">Ver Proyectos</a>
+        </div>
+
+        <div class="proyectos-imagen proyectos-imagen-1"></div>
+        <div class="proyectos-imagen proyectos-imagen-2"></div>
+        <div class="proyectos-imagen proyectos-imagen-3"></div>
+    </section>
+
+    <section class="section prototipos">
+        <div class="container">
+            <h2 class="prototipos-title">Prototipos Arquitectonicos</h2>
+            <p class="prototipos-description">
+                Planos y renders de casas prediseñadas para construir de forma rápida, segura y profesional, sin partir
+                desde cero.
+            </p>
+            <a href="#" class="btn-cta">Ver Prototipos</a>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="team-container">
+            <div class="team-content">
+                <h2 class="team-titulo">Conoce a Nuestro Equipo</h2>
+                <p class="team-descripcion">
+                    Somos un equipo de arquitectos apasionados por crear espacios únicos y funcionales.
+                    Cada proyecto es una oportunidad para transformar ideas en realidades habitables.
+                    Conoce más sobre nosotros, contáctanos para discutir tu proyecto o visita nuestras oficinas.
+                </p>
+                <a href="#" class="btn-cta team-btn">Contactar</a>
+            </div>
+
+            <div class="team-imagen">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Equipo de arquitectos trabajando">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-columna logo">
+                    <img src="assets/logos/logo-blanco.png" alt="Logo Empresa" class="footer-logo">
+                </div>
+
+                <div class="footer-columna">
+                    <ul class="footer-navegacion">
+                        <li class="footer-navegacion-item">
+                            <a href="#" class="footer-navegacion-link">Inicio</a>
+                        </li>
+                        <li class="footer-navegacion-item">
+                            <a href="#" class="footer-navegacion-link">Residencias</a>
+                        </li>
+                        <li class="footer-navegacion-item">
+                            <a href="#" class="footer-navegacion-link">Servicios</a>
+                        </li>
+                        <li class="footer-navegacion-item">
+                            <a href="#" class="footer-navegacion-link">Nosotros</a>
+                        </li>
+                        <li class="footer-navegacion-item">
+                            <a href="#" class="footer-navegacion-link">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-columna">
+                    <div class="footer-redes">
+                        <a href="#" class="footer-red-social">
+                            <span><i class="bi bi-facebook"></i></span> Facebook
+                        </a>
+                        <a href="#" class="footer-red-social">
+                            <span><i class="bi bi-instagram"></i></span> Instagram
+                        </a>
+                        <a href="#" class="footer-red-social">
+                            <span><i class="bi bi-whatsapp"></i></span> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2025 Otoch Arquitectos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
