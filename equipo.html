@@ -5,227 +5,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="shortcut icon" href="assets/logos/otoch-icono.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logos/otoch-ico.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/equipo.css">
-    <link rel="stylesheet" href="shared/global.css">
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
-    <button class="hamburger-btn" id="hamburgerBtn">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logos/logo-header.webp" alt="Logo">
+            </a>
 
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-content">
-            <a href="index.html">Inicio</a>
-            <a href="">Servicios</a>
-            <a href=""> Residencias</a>
+            <nav class="nav-desktop">
+                <a href="index.html">Inicio</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="equipo.html">Contacto</a>
+            </nav>
 
-            <div class="mobile-social-separator"></div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span><span></span><span></span>
+            </label>
 
-            <div class="mobile-social-links">
-                <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
-            </div>
-        </div>
-    </div>
+            <nav class="nav-mobile">
+                <button class="close-btn" aria-label="Cerrar menú">&times;</button>
 
-    <header>
-        <div class="header-main">
-            <div class="logo-header">
-                <a href="index.html">
-                    <img src="assets/logos/logo-header.webp" alt="Funeraria Logo">
-                </a>
-            </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="equipo.html">Contacto</a></li>
+                </ul>
 
-            <nav>
-                <button class="menu-pc-toggle" id="menuToggle">
-                    <span class="menu-pc-bar"></span>
-                    <span class="menu-pc-bar"></span>
-                    <span class="menu-pc-bar"></span>
-                </button>
-
-                <div class="menu-pc-dropdown" id="menuDropdown">
-                    <ul class="menu-pc-list">
-                        <li class="menu-pc-item"><a href="index.html" class="menu-pc-link">Inicio</a></li>
-                        <li class="menu-pc-item"><a href="servicios.html" class="menu-pc-link">Servicios</a></li>
-                        <li class="menu-pc-item"><a href="proyectos.html" class="menu-pc-link">Proyectos</a>
-                        </li>
-                    </ul>
+                <div class="nav-social">
+                    <a href="https://www.facebook.com/otoch.arquitectos">
+                        <i class="bi bi-facebook"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/otoch.arquitectos/">
+                        <i class="bi bi-instagram"></i> Instagram
+                    </a>
                 </div>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
+    <section class="intro">
             <h1>Contacto</h1>
-        </div>
     </section>
 
-    <section class="profiles-section">
-        <div class="container">
+    <section class="profile-section">
+        <div class="profiles-column">
             <div class="profile-card">
-                <div class="profile-image">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop&crop=face"
-                        alt="Juan Pérez">
-                </div>
+                <div class="profile-avatar">AM</div>
                 <div class="profile-info">
-                    <div class="profile-name">Juan Pérez</div>
-                    <div class="profile-position">Director General</div>
-                </div>
-                <div class="profile-contact">
-                    <a href="tel:+1234567890" class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
-                        </svg>
-                        +52 123 456 7890
-                    </a>
-                    <a href="mailto:juan@empresa.com" class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
-                        </svg>
-                        juan@empresa.com
-                    </a>
+                    <div class="profile-name">
+                        <h4>Ana Martínez</h4>
+                    </div>
+                    <div class="profile-contact-item">
+                        <div class="profile-icon"><i class="bi bi-envelope"></i></div>
+                        <a href="">ana.martinez@empresa.com</a>
+                    </div>
+                    <div class="profile-contact-item">
+                        <div class="profile-icon"><i class="bi bi-telephone"></i></div>
+                        <a href="">+52 555 123 4567</a>
+                    </div>
                 </div>
             </div>
 
             <div class="profile-card">
-                <div class="profile-image">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face"
-                        alt="María García">
-                </div>
+                <div class="profile-avatar">AM</div>
                 <div class="profile-info">
-                    <div class="profile-name">María García</div>
-                    <div class="profile-position">Gerente de Marketing</div>
-                </div>
-                <div class="profile-contact">
-                    <a href="tel:+1234567891" class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
-                        </svg>
-                        +52 123 456 7891
-                    </a>
-                    <a href="mailto:maria@empresa.com" class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
-                        </svg>
-                        maria@empresa.com
-                    </a>
+                    <div class="profile-name">
+                        <h4>Ana Martínez</h4>
+                    </div>
+                    <div class="profile-contact-item">
+                        <div class="profile-icon"><i class="bi bi-envelope"></i></div>
+                        <a href="">ana.martinez@empresa.com</a>
+                    </div>
+                    <div class="profile-contact-item">
+                        <div class="profile-icon"><i class="bi bi-telephone"></i></div>
+                        <a href="">+52 555 123 4567</a>
+                    </div>
                 </div>
             </div>
 
             <div class="profile-card">
-                <div class="profile-image">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face"
-                        alt="Carlos Rodríguez">
-                </div>
+                <div class="profile-avatar">AM</div>
                 <div class="profile-info">
-                    <div class="profile-name">Carlos Rodríguez</div>
-                    <div class="profile-position">Jefe de Ventas</div>
-                </div>
-                <div class="profile-contact">
-                    <a href="tel:+1234567892" class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
-                        </svg>
-                        +52 123 456 7892
-                    </a>
-                    <a href="mailto:carlos@empresa.com" class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
-                        </svg>
-                        carlos@empresa.com
-                    </a>
+                    <div class="profile-name">
+                        <h4>Ana Martínez</h4>
+                    </div>
+                    <div class="profile-contact-item">
+                        <div class="profile-icon"><i class="bi bi-envelope"></i></div>
+                        <a href="">ana.martinez@empresa.com</a>
+                    </div>
+                    <div class="profile-contact-item">
+                        <div class="profile-icon"><i class="bi bi-telephone"></i></div>
+                        <a href="">+52 555 123 4567</a>
+                    </div>
                 </div>
             </div>
 
             <div class="profile-card">
-                <div class="profile-image">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop&crop=face"
-                        alt="Ana López">
-                </div>
+                <div class="profile-avatar">AM</div>
                 <div class="profile-info">
-                    <div class="profile-name">Ana López</div>
-                    <div class="profile-position">Directora de Recursos Humanos</div>
-                </div>
-                <div class="profile-contact">
-                    <a href="tel:+1234567893" class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
-                        </svg>
-                        +52 123 456 7893
-                    </a>
-                    <a href="mailto:ana@empresa.com" class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24">
-                            <path
-                                d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
-                        </svg>
-                        ana@empresa.com
-                    </a>
+                    <div class="profile-name">
+                        <h4>Ana Martínez</h4>
+                    </div>
+                    <div class="profile-contact-item">
+                        <div class="profile-icon"><i class="bi bi-envelope"></i></div>
+                        <a href="">ana.martinez@empresa.com</a>
+                    </div>
+                    <div class="profile-contact-item">
+                        <div class="profile-icon"><i class="bi bi-telephone"></i></div>
+                        <a href="">+52 555 123 4567</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="bottom-section">
-        <div class="container">
-            <div class="two-columns">
-                <div class="column">
-                    <h3>Síguenos en Redes Sociales</h3>
+        <div class="company-info">
+            <h3>Información de Contacto</h3>
+            <p class="company-subtitle">Estamos aquí para ayudarte</p>
 
-                    <div class="social-item">
-                        <i class="bi bi-facebook"></i>
-                        <span class="social-text">Facebook - <a href="">@nuestraempresa</a></span>
-                    </div>
-                    <div class="social-item">
-                        <i class="bi bi-instagram"></i>
-                        <span class="social-text">Facebook - <a href="">@nuestraempresa</a></span>
+            <div class="company-contact">
+                <div class="company-contact-item">
+                    <div class="company-icon"><i class="bi bi-envelope"></i></div>
+                    <div class="company-contact-text">
+                        <h4>Correo Electrónico</h4>
+                        <a href="">info@empresa.com</a>
                     </div>
                 </div>
 
-                <div class="column">
-                    <h3>Información de Contacto</h3>
+                <div class="company-contact-item">
+                    <div class="company-icon"><i class="bi bi-telephone"></i></div>
+                    <div class="company-contact-text">
+                        <h4>Télefono</h4>
+                        <a href="">info@empresa.com</a>
+                    </div>
+                </div>
 
-                    <div class="company-info">
-                        <div class="info-item">
-                            <i class="bi bi-envelope"></i>
-                            <div class="info-content">
-                                <h4>Correo Electrónico</h4>
-                                <p>contacto@nuestraempresa.com<br>
-                                    info@nuestraempresa.com</p>
-                            </div>
-                        </div>
+                <div class="company-contact-item">
+                    <div class="company-icon"><i class="bi bi-clock"></i></div>
+                    <div class="company-contact-text">
+                        <h4>Horarios de atención</h4>
+                        <a href="">info@empresa.com</a>
+                    </div>
+                </div>
 
-                        <div class="info-item">
-                            <i class="bi bi-geo-alt"></i>
-                            <div class="info-content">
-                                <h4>Ubicación</h4>
-                                <p>Av. Reforma 123, Piso 10<br>
-                                    Col. Centro, Ciudad de México<br>
-                                    C.P. 06000, México</p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <i class="bi bi-clock"></i>
-                            <div class="info-content">
-                                <h4>Horarios de Atención</h4>
-                                <p>Lunes a Viernes: 9:00 AM - 6:00 PM<br>
-                                    Sábados: 9:00 AM - 2:00 PM<br>
-                                    Domingos: Cerrado</p>
-                            </div>
-                        </div>
+                <div class="company-contact-item">
+                    <div class="company-icon"><i class="bi bi-geo-alt"></i></div>
+                    <div class="company-contact-text">
+                        <h4>Dirección</h4>
+                        <a href="">info@empresa.com</a>
                     </div>
                 </div>
             </div>
@@ -277,7 +212,7 @@
         </div>
     </footer>
 
-    <script src="js/index.js"></script>
+    <script src="js/contacto.js"></script>
 </body>
 
 </html>

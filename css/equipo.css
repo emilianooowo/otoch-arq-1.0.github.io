@@ -1,71 +1,46 @@
-.hero {
-    position: relative;
-    height: 45vh;
-    background: rgb(11, 92, 24, .6);
+.intro {
+    margin-top: 8rem;
+    height: 30vh;
+    color: rgb(45, 86, 52, 0.9);
+    padding: 0 5%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: white;
-    text-align: center;
+    align-items: center;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 20px;
-    background: linear-gradient(to bottom, white, transparent);
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background: linear-gradient(to top, white, transparent);
-}
-
-.hero-content {
-    z-index: 2;
-}
-
-.container {
+.profile-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 40px 20px;
 }
 
-.profiles-section {
-    padding: 80px 0;
-    background: #f8f9fa;
+.profiles-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .profile-card {
+    border-radius: 20px;
+    padding: 20px;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.profile-image {
-    width: 120px;
-    height: 120px;
-    background: #ddd;
-    margin-right: 20px;
-}
-
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.profile-avatar img {
+    width: auto;
+    height: 80px;
 }
 
 .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     flex: 1;
 }
 
@@ -73,113 +48,112 @@
     margin-bottom: 5px;
 }
 
-.profile-position {
-    color: #7f8c8d;
-    margin-bottom: 15px;
-}
-
-.profile-contact {
-    margin-left: auto;
+.profile-contact-item {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
 
-.contact-item {
-    display: flex;
+.profile-icon {
     align-items: center;
-    gap: 8px;
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-item:hover {
+    justify-content: center;
     color: var(--color-verde);
+    font-size: 1.2rem;
 }
 
-.contact-icon {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
+.profile-contact-item a:hover{
+    text-decoration: underline;
 }
 
-.bottom-section {
-    padding: 60px 0;
-    background: white;
+.company-info {
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    height: fit-content;
 }
 
-.two-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+.company-subtitle {
+    margin: 20px 0;
 }
 
-.column h3 {
-    margin-bottom: 30px;
-    position: relative;
+.company-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.social-item {
+.company-contact-item {
+    padding: 18px;
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 20px;
 }
 
-.social-text {
-    color: #000;
-}
-
-.social-text a {
-    color: #000;
-}
-
-.social-text a:hover {
-    color: rgb(11, 92, 24);
-}
-
-.info-item {
+.company-icon {
+    width: 40px;
+    height: 40px;
     display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-verde);
+    font-size: 1.5em;
 }
 
-
-.info-content h4 {
-    margin-bottom: 5px;
+.company-contact-text a:hover{
+    text-decoration: underline;
 }
 
-.info-content p {
-    color: #5a6c7d;
+@media (max-width: 1000px) {
+    .profile-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .company-info {
+        position: static;
+    }
 }
 
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
     .profile-card {
         flex-direction: column;
         text-align: center;
+        gap: 15px;
     }
 
-    .profile-contact {
-        margin-left: 0;
-        margin-top: 20px;
+    .profile-info {
+        align-items: center;
     }
 
-    .two-columns {
-        grid-template-columns: 1fr;
-        gap: 40px;
+    .profile-contact-item {
+        justify-content: center;
     }
 
-    .container {
-        padding: 0 15px;
+    .company-info {
+        padding: 30px;
+    }
+
+    .company-title {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 1.5em;
+    }
+
+    .profile-name {
+        font-size: 1.1em;
+    }
+
+    .profile-contact-item {
+        font-size: 0.9em;
     }
 }

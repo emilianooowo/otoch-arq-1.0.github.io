@@ -1,32 +1,12 @@
 .hero {
     position: relative;
-    height: 45vh;
+    height: 35vh;
     background: rgb(11, 92, 24, .6);
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 20px;
-    background: linear-gradient(to bottom, white, transparent);
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background: linear-gradient(to top, white, transparent);
 }
 
 .hero-content {

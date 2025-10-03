@@ -1,278 +1,245 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Otoch Arquitectos</title>
-    <link rel="shortcut icon" href="assets/logos/otoch-icono.ico" type="image/x-icon">
+    <title>Otoch Arquitectos - Diseño y Construcción</title>
+    <link rel="shortcut icon" href="assets/logos/otoch-ico.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="shared/global.css">
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <meta name="description"
+        content="Estudio de arquitectura especializado en diseño residencial, comercial y servicios de construcción. Proyectos arquitectónicos innovadores y sustentables.">
+    <meta name="keywords"
+        content="arquitecto, diseño arquitectónico, construcción, proyectos residenciales, diseño comercial, planos arquitectónicos">
 </head>
 
 <body>
-    <button class="hamburger-btn" id="hamburgerBtn">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-content">
-            <a href="index.html">Inicio</a>
-            <a href="">Servicios</a>
-            <a href=""> Residencias</a>
-            <a href=""> Contacto</a>
-
-            <div class="mobile-social-separator"></div>
-
-            <div class="mobile-social-links">
-                <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+    <div class="top-bar">
+        <div class="container">
+            <div class="location">
+                <i class="bi bi-geo-alt"></i>
+                Tapachula, Chis.
+            </div>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
             </div>
         </div>
     </div>
 
-    <header>
-        <div class="header-main">
-            <div class="logo-header">
-                <a href="index.html">
-                    <img src="assets/logos/logo-header.webp" alt="Funeraria Logo">
-                </a>
-            </div>
+    <nav class="main-header">
+        <div class="header-container">
+            <a class="navbar-logo" href="index.html">
+                <img src="assets/logos/logo-header.webp" alt="">
+            </a>
 
-            <nav>
-                <button class="menu-pc-toggle" id="menuToggle">
-                    <span class="menu-pc-bar"></span>
-                    <span class="menu-pc-bar"></span>
-                    <span class="menu-pc-bar"></span>
-                </button>
-
-                <div class="menu-pc-dropdown" id="menuDropdown">
-                    <ul class="menu-pc-list">
-                        <li class="menu-pc-item"><a href="servicios.html" class="menu-pc-link">Servicios</a></li>
-                        <li class="menu-pc-item"><a href="proyectos.html" class="menu-pc-link">Proyectos</a>
-                        </li>
-                        <li class="menu-pc-item"><a href="equipo.html" class="menu-pc-link">Contacto</a></li>
-                    </ul>
+            <input type="checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </nav>
+            </label>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="proyectos.html">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="equipo.html">Contacto</a>
+                </li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <section class="hero">
-        <div class="hero-image">
-            <img src="assets/02.webp" alt="Construcción profesional">
-        </div>
-
         <div class="hero-content">
-            <h1 class="hero-title">Construcciones de Calidad</h1>
+            <h1 class="hero-title">CONSTRUCCIÓN Y<br>DISEÑO MODERNO</h1>
+            <div class="hero-line"></div>
             <p class="hero-description">
-                Nos enfocamos en crear espacios funcionales, accesibles y bien diseñados,
-                pensados para brindar comodidad, satisfacción y una experiencia única a cada usuario.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="equipo.html" class="hero-btn hero-btn-contact">Contactar</a>
-                <a href="proyectos.html" class="hero-btn hero-btn-projects">Ver Proyectos</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="abt-us-section">
-        <div class="abt-us-container">
-            <div class="abt-us-content">
-                <h2 class="abt-us-title">Sobre Nosotros</h2>
-                <p class="abt-us-description">
-                    Corporativo de arquitectos, con raíces chiapanecas, apasionados por el diseño y la construcción, con
-                    propuestas vanguardistas que integran las ideas, necesidades y presupuesto de nuestros clientes.
-                </p>
-            </div>
-
-            <div class="abt-us-icons">
-                <div class="abt-us-icon" data-title="Chiapas">
-                    <span class="abt-us-icon-title">Raíces Chiapanecas</span>
-                    <img src="assets/chapas.png" alt="">
-                </div>
-
-                <div class="abt-us-icon" data-title="Diseño">
-                    <span class="abt-us-icon-title">Diseño Vanguardista</span>
-                    <img src="assets/design.svg" alt="">
-                </div>
-
-                <div class="abt-us-icon" data-title="Construcción">
-                    <span class="abt-us-icon-title">Construcción de Calidad</span>
-                    <img src="assets/construccion.svg" alt="">
-                </div>
-
-                <div class="abt-us-icon" data-title="Clientes">
-                    <span class="abt-us-icon-title">Enfoque al Cliente</span>
-                    <img src="assets/cliente.svg" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="servicios-section">
-        <div class="servicios-header">
-            <h2 class="servicios-titulo">Servicios</h2>
-            <p class="servicios-descripcion">
-                Nuestro trabajo se desarrolla en tres etapas que transforman tu idea en un proyecto arquitectónico
-                integral.
+                Transformamos espacios en experiencias únicas.
+                Creamos arquitectura contemporánea que combina
+                funcionalidad, estética y sostenibilidad para
+                tu hogar o negocio.
             </p>
         </div>
-
-        <div class="servicios-cards">
-            <div class="servicios-card servicios-card-lateral">
-                <div class="servicios-icono">
-                    <img src="assets/proyectos.webp" alt="Proyecto Arquitectónico">
-                </div>
-                <h3 class="servicios-card-titulo">Proyecto Arquitectónico</h3>
-                <p class="servicios-card-descripcion">
-                    Levantamiento del terreno y propuesta inicial basada en tus necesidades.
-                </p>
-                <a href="servicios.html" class="btn-cta">Más Información</a>
-
-                <div class="servicios-hover-message">
-                    <p class="hover-mensaje">
-                        Ideal para quienes tienen un terreno y necesitan comenzar desde cero con el diseño de su
-                        proyecto.
-                    </p>
-                    <div class="progress-container">
-                        <div class="progress-label">Progreso del Proyecto</div>
-                        <div class="progress-bar">
-                            <div class="progress-step active"></div>
-                            <div class="progress-step"></div>
-                            <div class="progress-step"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="servicios-card servicios-card-centro">
-                <div class="servicios-icono">
-                    <img src="assets/comunidad.webp" alt="Proyecto Ejecutivo">
-                </div>
-                <h3 class="servicios-card-titulo">Proyecto Ejecutivo</h3>
-                <p class="servicios-card-descripcion">
-                    Definimos estructuras, instalaciones y acabados del proyecto final.
-                </p>
-                <a href="servicios.html" class="btn-cta">Más Información</a>
-
-                <div class="servicios-hover-message">
-                    <p class="hover-mensaje">
-                        Perfecto para quienes ya tienen el diseño aprobado y necesitan los planos técnicos para
-                        construir.
-                    </p>
-                    <div class="progress-container">
-                        <div class="progress-label">Progreso del Proyecto</div>
-                        <div class="progress-bar">
-                            <div class="progress-step active"></div>
-                            <div class="progress-step active"></div>
-                            <div class="progress-step"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="servicios-card servicios-card-lateral">
-                <div class="servicios-icono">
-                    <img src="assets/a_d.webp" alt="Presupuesto y Contrato">
-                </div>
-                <h3 class="servicios-card-titulo">Presupuesto Y Contrato de obra</h3>
-                <p class="servicios-card-descripcion">
-                    Detallamos los conceptos del proyecto y los ajustamos a tu presupuesto.
-                </p>
-                <a href="servicios.html" class="btn-cta">Más Información</a>
-
-                <div class="servicios-hover-message">
-                    <p class="hover-mensaje">
-                        Para quienes tienen planos ejecutivos listos y necesitan costear y ejecutar la construcción.
-                    </p>
-                    <div class="progress-container">
-                        <div class="progress-label">Progreso del Proyecto</div>
-                        <div class="progress-bar">
-                            <div class="progress-step active"></div>
-                            <div class="progress-step active"></div>
-                            <div class="progress-step active"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <section class="extras-section">
-        <div class="extras-container">
-            <div class="extras-header">
-                <h3 class="extras-title">Servicios Extras</h3>
+    <section class="sobre-nosotros">
+        <div class="abt-us-content">
+            <div>
+                <h2 class="titulo-principal">Sobre Nosotros</h2>
+                <p class="descripcion">
+                    Somos una empresa de arquitectura y construcción comprometida con la excelencia.
+                    Ofrecemos soluciones arquitectónicas innovadoras que combinan funcionalidad,
+                    estética moderna y respeto por nuestras raíces culturales.
+                </p>
             </div>
 
-            <div class="extras-grid">
-                <div class="extras-item">
-                    <h3 class="extras-subtitle">Asesorías</h3>
-                    <p class="extras-description">
-                        Brindamos orientación profesional para tomar decisiones informadas en cada etapa de tu proyecto.
-                    </p>
+            <div>
+                <div class="card-caracteristica">
+                    <div class="card-icon icon-raices">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-titulo">Raíces Chiapanecas</h4>
+                        <p class="card-texto">
+                            Identidad local integrada con funcionalidad contemporánea
+                        </p>
+                    </div>
                 </div>
 
-                <div class="extras-item">
-                    <h3 class="extras-subtitle">Créditos Inmobiliarios</h3>
-                    <p class="extras-description">
-                        Te guiamos en el proceso de obtención de financiamiento para que puedas hacer realidad tu
-                        proyecto de vivienda.
-                    </p>
+                <div class="card-caracteristica">
+                    <div class="card-icon icon-diseno">
+                        <i class="bi bi-palette-fill"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-titulo">Diseño Vanguardista</h4>
+                        <p class="card-texto">
+                            Proyectos innovadores con enfoque sustentable y estético
+                        </p>
+                    </div>
                 </div>
 
-                <div class="extras-item">
-                    <h3 class="extras-subtitle">Inversión Inmobiliaria</h3>
-                    <p class="extras-description">
-                        Te asesoramos en oportunidades de inversión en bienes raíces para optimizar tu capital con
-                        proyectos rentables.
-                    </p>
+                <div class="card-caracteristica">
+                    <div class="card-icon icon-construccion">
+                        <i class="bi bi-hammer"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-titulo">Construcción de Calidad</h4>
+                        <p class="card-texto">
+                            Ejecución eficiente con altos estándares técnicos
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-caracteristica">
+                    <div class="card-icon icon-cliente">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-titulo">Enfoque al Cliente</h4>
+                        <p class="card-texto">
+                            Asesoría experta en normativas y optimización de espacios
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="proyectos-section">
-        <div class="proyectos-titulo-container">
-            <h2 class="proyectos-titulo">Proyectos</h2>
-            <a href="proyectos.html" class="btn-cta">Ver Proyectos</a>
-        </div>
+        <div class="projects-content">
+            <h2 class="titulo-principal">Nuestros Proyectos</h2>
 
-        <div class="proyectos-imagen proyectos-imagen-1"></div>
-        <div class="proyectos-imagen proyectos-imagen-2"></div>
-        <div class="proyectos-imagen proyectos-imagen-3"></div>
-    </section>
-
-    <section class="section prototipos">
-        <div class="container">
-            <h2 class="prototipos-title">Prototipos Arquitectonicos</h2>
-            <p class="prototipos-description">
-                Planos y renders de casas prediseñadas para construir de forma rápida, segura y profesional, sin partir
-                desde cero.
-            </p>
-            <a href="proyectos.html#prototipos" class="btn-cta">Ver Prototipos</a>
-        </div>
-    </section>
-
-    <section class="team">
-        <div class="team-container">
-            <div class="team-content">
-                <h2 class="team-titulo">Conoce a Nuestro Equipo</h2>
-                <p class="team-descripcion">
-                    Somos un equipo de arquitectos apasionados por crear espacios únicos y funcionales.
-                    Cada proyecto es una oportunidad para transformar ideas en realidades habitables.
-                    Conoce más sobre nosotros, contáctanos para discutir tu proyecto o visita nuestras oficinas.
-                </p>
-                <a href="equipo.html" class="btn-cta team-btn">Contactar</a>
+            <div class="carrusel-container">
+                <div class="carrusel-wrapper" id="carruselWrapper"></div>
             </div>
 
-            <div class="team-imagen">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                    alt="Equipo de arquitectos trabajando">
+            <div class="controles-carrusel">
+                <button class="btn-carrusel" id="btnAnterior"><i class="bi bi-chevron-left"></i></button>
+                <button class="btn-carrusel" id="btnSiguiente"><i class="bi bi-chevron-right"></i></button>
+            </div>
+
+            <a href="#" class="cta-button">Ver todos los proyectos <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <section class="servicios-intro">
+        <div class="imagen-container">
+            <div class="imagen-slider">
+                <div class="imagen-slide active"></div>
+                <div class="imagen-slide"></div>
+                <div class="imagen-slide"></div>
+            </div>
+        </div>
+        <div class="contenido-intro">
+            <h2 class="titulo-principal">Nuestros Servicios</h2>
+            <p class="descripcion-intro">
+                En nuestra constructora, cada proyecto se desarrolla siguiendo un proceso estructurado que garantiza la
+                excelencia y satisfacción de nuestros clientes. Nuestro método se basa en tres etapas fundamentales que
+                aseguran el éxito de cada construcción.
+            </p>
+            <ul class="pasos-lista">
+                <li>Proyecto Arquitectónico</li>
+                <li>Proyecto Ejecutivo</li>
+                <li>Presupuesto y Contrato de Obra</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="servicios">
+        <div class="servicios-container">
+            <div class="servicio-card arquitectonico">
+                <div class="card-contenido">
+                    <h3 class="card-titulo">Proyecto Arquitectónico</h3>
+                    <p class="card-descripcion">
+                        Desarrollamos el concepto inicial de tu proyecto, creando diseños que combinan
+                        funcionalidad, estética y sustentabilidad.
+                    </p>
+                    <div class="progreso-container">
+                        <div class="progreso-barra">
+                            <div class="progreso-fill" style="width: 33%;"></div>
+                        </div>
+                        <div class="progreso-etapas">
+                            <span class="etapa activa">Arquitectónico</span>
+                            <span class="etapa">Ejecutivo</span>
+                            <span class="etapa">Construcción</span>
+                        </div>
+                    </div>
+                    <a href="#" class="cta-button">Solicitar Diseño</a>
+                </div>
+            </div>
+
+            <div class="servicio-card ejecutivo">
+                <div class="card-contenido">
+                    <h3 class="card-titulo">Proyecto <br> Ejecutivo</h3>
+                    <p class="card-descripcion">
+                        Transformamos el diseño arquitectónico en planos detallados, considerando
+                        cambios mediante el proceso de la etapa anterior. </p>
+                    <div class="progreso-container">
+                        <div class="progreso-barra">
+                            <div class="progreso-fill" style="width: 66%;"></div>
+                        </div>
+                        <div class="progreso-etapas">
+                            <span class="etapa">Arquitectónico</span>
+                            <span class="etapa activa">Ejecutivo</span>
+                            <span class="etapa">Construcción</span>
+                        </div>
+                    </div>
+                    <a href="#" class="cta-button">Obtener Planos</a>
+                </div>
+            </div>
+
+            <div class="servicio-card presupuesto">
+                <div class="card-contenido">
+                    <h3 class="card-titulo">Presupuesto y Contrato de Obra</h3>
+                    <p class="card-descripcion">
+                        Elaboramos un presupuesto detallado y transparente. Iniciamos la construcción cumpliendo con los
+                        tiempos establecidos.
+                    </p>
+                    <div class="progreso-container">
+                        <div class="progreso-barra">
+                            <div class="progreso-fill" style="width: 100%;"></div>
+                        </div>
+                        <div class="progreso-etapas">
+                            <span class="etapa">Arquitectónico</span>
+                            <span class="etapa">Ejecutivo</span>
+                            <span class="etapa activa">Construcción</span>
+                        </div>
+                    </div>
+                    <a href="#" class="cta-button">Iniciar Proyecto</a>
+                </div>
             </div>
         </div>
     </section>
@@ -303,10 +270,10 @@
 
                 <div class="footer-columna">
                     <div class="footer-redes">
-                        <a href="#" class="footer-red-social">
+                        <a href="https://www.facebook.com/otoch.arquitectos" class="footer-red-social">
                             <span><i class="bi bi-facebook"></i></span> Facebook
                         </a>
-                        <a href="#" class="footer-red-social">
+                        <a href="https://www.instagram.com/otoch.arquitectos/" class="footer-red-social">
                             <span><i class="bi bi-instagram"></i></span> Instagram
                         </a>
                         <a href="#" class="footer-red-social">
@@ -322,8 +289,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/529622361377" class="whatsapp-float" target="_blank"
-        aria-label="Chatea con nosotros por WhatsApp">
+    <a href="https://wa.me/" class="whatsapp-float" target="_blank" aria-label="Chatea con nosotros por WhatsApp">
         <i class="bi bi-whatsapp" aria-hidden="true"></i>
     </a>
 
