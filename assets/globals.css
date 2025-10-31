@@ -81,7 +81,8 @@ button {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #2b2d2e;
+    background-color: #fff;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
 
 .header-inner {
@@ -135,22 +136,22 @@ button {
 .hamburger span {
     width: 27px;
     height: 3px;
-    background: #fff;
+    background: #000;
 }
 
 .header-location {
     text-align: center;
     padding: 5px;
     font-size: 0.85rem;
-    color: #fff;
-    border-bottom: 1px solid #bfbfbf;
+    color: #000;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .side-menu {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 300px;
+    width: 400px;
     height: 100vh;
     background: #fff;
     z-index: 2000;
@@ -203,10 +204,13 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-decoration: none;
     font-weight: 600;
     padding: 1rem 1rem;
     cursor: pointer;
+}
+
+.side-menu__link.active {
+    color: var(--color-verde);
 }
 
 .side-menu__link:hover {

@@ -38,16 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
         showSlide(next);
     }, 8000);
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                heroSlider.classList.add("expanded");
-            }
-        });
-    }, { threshold: 1 });
-
-    observer.observe(heroSlider);
-
     function parallaxEffect() {
         if (window.innerWidth < 1024) return;
 
@@ -56,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const sliderHeight = heroSlider.offsetHeight;
 
         if (scrolled + window.innerHeight > sliderTop && scrolled < sliderTop + sliderHeight) {
-            const offset = (scrolled - sliderTop) * 0.1;
+            const offset = (scrolled - sliderTop) * 0.4;
             slides.forEach(slide => {
                 if (slide.classList.contains("active")) {
                     slide.style.transform = `translateY(${offset}px)`;
