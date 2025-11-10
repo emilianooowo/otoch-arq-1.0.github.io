@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            padding: 50px 0;
+        }
+
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .left-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            height: 600px;
+            background: #ddd;
+        }
+
+        .left-image img {
+            width: 0;
+            height: 100%;
+            object-fit: cover;
+            transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        .left-image img.animate {
+            width: 100%;
+        }
+
+        .right-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .top-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            height: 300px;
+            background: #ddd;
+        }
+
+        .top-image img {
+            width: 0;
+            height: 100%;
+            object-fit: cover;
+            transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+            transition-delay: 0.2s;
+        }
+
+        .top-image img.animate {
+            width: 100%;
+        }
+
+        .text-content {
+            padding: 20px 0;
+        }
+
+        .text-content h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .text-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .left-image {
+                height: 400px;
+            }
+
+            .text-content h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="about-section">
+        <div class="about-grid">
+            <div class="left-image">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=1200&fit=crop" alt="Oficina moderna">
+            </div>
+
+            <div class="right-content">
+                <div class="top-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=600&fit=crop" alt="Equipo trabajando">
+                </div>
+
+                <div class="text-content">
+                    <h2>Sobre Nosotros</h2>
+                    <p>
+                        Somos una empresa comprometida con la excelencia y la innovación. 
+                        Desde nuestros inicios, hemos trabajado incansablemente para ofrecer 
+                        soluciones de alta calidad que superan las expectativas de nuestros clientes.
+                    </p>
+                    <p>
+                        Nuestro equipo está formado por profesionales apasionados y dedicados 
+                        que comparten una visión común: transformar ideas en realidades tangibles 
+                        que generen un impacto positivo en la comunidad y en el mundo.
+                    </p>
+                    <p>
+                        Con años de experiencia en la industria, nos enorgullece mantener los 
+                        más altos estándares de calidad en cada proyecto que emprendemos, 
+                        construyendo relaciones duraderas basadas en la confianza y el respeto mutuo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Función para detectar cuando los elementos entran al viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Función para animar las imágenes
+        function animateImages() {
+            const leftImg = document.querySelector('.left-image img');
+            const topImg = document.querySelector('.top-image img');
+
+            // Animar imagen izquierda
+            if (isInViewport(leftImg) && !leftImg.classList.contains('animate')) {
+                leftImg.classList.add('animate');
+            }
+
+            // Animar imagen superior derecha
+            if (isInViewport(topImg) && !topImg.classList.contains('animate')) {
+                topImg.classList.add('animate');
+            }
+        }
+
+        // Ejecutar al cargar la página
+        window.addEventListener('load', animateImages);
+
+        // Ejecutar al hacer scroll
+        window.addEventListener('scroll', animateImages);
+
+        // Ejecutar al redimensionar la ventana
+        window.addEventListener('resize', animateImages);
+    </script>
+</body>
+</html>

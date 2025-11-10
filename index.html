@@ -52,9 +52,21 @@
 
 <body>
     <header class="main-header">
+
         <div class="header-location">
-            <i class="bi bi-geo-alt"></i> Tapachula, Chis.
+            <div class="header-location__text">
+                <i class="bi bi-geo-alt"></i> Tapachula, Chis.
+            </div>
+
+            <div class="header-location__social">
+                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.facebook.com/otoch.arquitectos" aria-label="Facebook"><i
+                        class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/otoch.arquitectos/" aria-label="Instagram"><i
+                        class="bi bi-instagram"></i></a>
+            </div>
         </div>
+
         <div class="header-inner">
             <div class="header-left">
                 <a class="navbar-logo" href="index.html">
@@ -63,73 +75,26 @@
             </div>
 
             <div class="header-right">
-                <button class="hamburger" aria-label="Abrir menú">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+
+                <nav class="header-nav-desktop">
+                    <ul>
+                        <li><a href="index.html" class="active">INICIO</a></li>
+                        <li><a href="servicios.html">SERVICIOS</a></li>
+                        <li><a href="proyectos.html">PROYECTOS</a></li>
+                        <li><a href="equipo.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+
             </div>
         </div>
     </header>
 
-    <div class="side-menu">
-        <div class="side-menu__vertical-title">
-            <span>MENÚ</span>
-        </div>
-
-        <div class="side-menu__content">
-            <button class="side-menu__close" aria-label="Cerrar menú">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                </svg>
-            </button>
-
-            <nav class="side-menu__nav">
-                <ul>
-                    <li class="side-menu__item">
-                        <a href="index.html" class="side-menu__link active">INICIO</a>
-                    </li>
-                    <li class="side-menu__item">
-                        <a href="servicios.html" class="side-menu__link">SERVICIOS</a>
-                        <ul class="side-menu__submenu">
-                            <li><a href="servicios.html#arquitectonico" class="side-menu__sublink">Proyecto
-                                    Arquitectónico</a></li>
-                            <li><a href="servicios.html#ejecutivo" class="side-menu__sublink">Proyecto Ejecutivo</a>
-                            </li>
-                            <li><a href="servicios.html#presupuesto" class="side-menu__sublink">Presupuesto y
-                                    Contrato de Obra</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="side-menu__item">
-                        <a href="proyectos.html" class="side-menu__link">PROYECTOS</a>
-                        <ul class="side-menu__submenu">
-                            <li><a href="servicios.html#arquitectonico" class="side-menu__sublink">Obras</a></li>
-                            <li><a href="servicios.html#ejecutivo" class="side-menu__sublink">Remodelaciones</a>
-                            </li>
-                            <li><a href="servicios.html#presupuesto" class="side-menu__sublink">Prototipos Arq.</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="side-menu__item">
-                        <a href="equipo.html" class="side-menu__link">CONTACTO</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="side-menu__social">
-                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-                <a href="https://www.facebook.com/otoch.arquitectos" aria-label="Facebook"><i
-                        class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/otoch.arquitectos/" aria-label="Instagram"><i
-                        class="bi bi-instagram"></i></a>
-            </div>
-
-        </div>
-    </div>
-
     <section class="hero-gallery">
-        <div class="hero-top">
+        <div class="hero-slider" id="heroSlider">
+            <div class="slide" style="background-image: url('assets/imgs/proyectos/proyecto.PNG')"></div>
+        </div>
+
+        <div class="hero-bottom">
             <h1 class="hero-title">CONSTRUCCIÓN Y DISEÑO MODERNO</h1>
             <div class="hero-right">
                 <p class="description">
@@ -142,214 +107,188 @@
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="hero-slider" id="heroSlider">
-            <div class="slide active" style="background-image: url('assets/imgs/proyectos/IMG_7366.webp')"></div>
-            <div class="slide" style="background-image: url('assets/imgs/proyectos/proyecto.PNG')"></div>
+    <section class="about-section">
+        <div class="about-grid">
+            <div class="left-image">
+                <img src="assets/imgs/proyectos/proyecto2.PNG" alt="Oficina moderna">
+            </div>
+
+            <div class="right-content">
+                <div class="top-image">
+                    <img src="assets/imgs/proyectos/proyecto.PNG" alt="Equipo trabajando">
+                </div>
+
+                <h2>Sobre Nosotros</h2>
+                <p>
+                    Somos una empresa comprometida con la excelencia y la innovación.
+                    Desde nuestros inicios, hemos trabajado incansablemente para ofrecer
+                    soluciones de alta calidad que superan las expectativas de nuestros clientes.
+                </p>
+                <p>
+                    Nuestro equipo está formado por profesionales apasionados y dedicados
+                    que comparten una visión común: transformar ideas en realidades tangibles
+                    que generen un impacto positivo en la comunidad y en el mundo.
+                </p>
+            </div>
         </div>
     </section>
 
     <section class="services-section">
-        <div class="services-container">
-            <h2 class="services-title">NUESTROS SERVICIOS</h2>
-            <p class="services-description">
-                Ofrecemos un proceso integral de construcción dividido en tres etapas fundamentales.
-                Desde la conceptualización inicial hasta la ejecución final, acompañamos a nuestros clientes
-                en cada paso del camino para garantizar resultados excepcionales.
+        <div class="section-info">
+            <h2 class="section-title">Nuestro Proceso</h2>
+            <p class="section-description">
+                Cada construcción es un viaje que requiere planificación detallada y ejecución precisa.
+                Nuestros servicios abarcan todas las fases del proyecto garantizando calidad y profesionalismo en cada
+                etapa.
             </p>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon"><img src="assets/imgs/inicio/ico-helmet.webp" alt=""></div>
-                        <h5 class="service-title">Proyecto Arquitectónico</h5>
-                    </div>
-                    <p class="service-description">
-                        Desarrollamos el diseño conceptual y funcional de tu proyecto, considerando cada detalle para
-                        crear espacios que reflejen tu visión y necesidades.
-                    </p>
-                    <a href="#" class="service-cta">Ver más</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon"><img src="assets/imgs/inicio/ico-vest.webp" alt=""></div>
-                        <h5 class="service-title">Proyecto Ejecutivo</h5>
-                    </div>
-                    <p class="service-description">
-                        Documentación técnica completa y detallada para la construcción, incluyendo planos,
-                        especificaciones y todos los elementos necesarios.
-                    </p>
-                    <a href="#" class="service-cta">Ver más</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon"><img src="assets/imgs/inicio/ico-house.webp" alt=""></div>
-                        <h5 class="service-title">Presupuesto y Contrato</h5>
-                    </div>
-                    <p class="service-description">
-                        Elaboración precisa de presupuestos y gestión integral de contratos de obra, garantizando
-                        transparencia en cada etapa del proceso.
-                    </p>
-                    <a href="#" class="service-cta">Ver más</a>
-                </div>
-            </div>
         </div>
 
-        <div class="additional-container">
-            <h2 class="additional-title">SERVICIOS ADICIONALES</h2>
-
-            <div class="full-width-line-alt"></div>
-
-            <div class="additional-content">
-                <div class="additional-left">
-                    <p class="additional-description">
-                        Además de nuestros servicios principales, ofrecemos soluciones especializadas
-                        para satisfacer todas tus necesidades en construcción y desarrollo inmobiliario.
-                        Contamos con expertos en cada área para brindarte el mejor servicio.
-                    </p>
+        <div class="card-container">
+            <div class="service-card card-1">
+                <div class="card-icon">
+                    <img src="assets/imgs/inicio/ico-helmet.webp" alt="icono de arquitectura">
                 </div>
-
-                <div class="additional-right">
-                    <div class="services-scroll-container">
-                        <div class="services-scroll">
-                            <div class="additional-card">
-                                <div class="card-number">01</div>
-                                <h3 class="card-title">Remodelaciones</h3>
-                                <p class="card-description">
-                                    Transformamos y renovamos espacios existentes. Desde cocinas y baños hasta
-                                    remodelaciones completas, damos nueva vida a tu propiedad.
-                                </p>
-                                <a href="#remodelaciones" class="card-cta">Más información →</a>
-                                <div class="card-accent"></div>
-                            </div>
-
-                            <div class="additional-card">
-                                <div class="card-number">02</div>
-                                <h3 class="card-title">Asesorías</h3>
-                                <p class="card-description">
-                                    Consultoría especializada en construcción y diseño. Te guiamos en
-                                    cada etapa de tu proyecto con experiencia y profesionalismo.
-                                </p>
-                                <a href="#asesorias" class="card-cta">Más información →</a>
-                                <div class="card-accent"></div>
-                            </div>
-
-                            <div class="additional-card">
-                                <div class="card-number">03</div>
-                                <h3 class="card-title">Inversión Inmobiliaria</h3>
-                                <p class="card-description">
-                                    Análisis y desarrollo de proyectos de inversión. Maximizamos el
-                                    retorno de tu inversión con estrategias probadas.
-                                </p>
-                                <a href="#inversion" class="card-cta">Más información →</a>
-                                <div class="card-accent"></div>
-                            </div>
-
-                            <div class="additional-card">
-                                <div class="card-number">04</div>
-                                <h3 class="card-title">Otros Servicios</h3>
-                                <p class="card-description">
-                                    Gestión de permisos, avalúos, estudios de factibilidad y más.
-                                    Soluciones integrales para todas tus necesidades.
-                                </p>
-                                <a href="#otros" class="card-cta">Más información →</a>
-                                <div class="card-accent"></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-content">
+                    <h4 class="card-title">Proyecto Arquitectónico</h4>
+                    <p class="card-description">
+                        Aquí se crean los planos y visualizaciones que muestran cómo quedará la
+                        obra antes de construirla, combinando funcionalidad, estética y tus necesidades.
+                    </p>
+                    <a href="#" class="card-cta">ver más →</a>
+                </div>
+            </div>
+            <div class="service-card card-2">
+                <div class="card-icon">
+                    <img src="assets/imgs/inicio/ico-vest.webp" alt="icono de arquitectura">
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">Proyecto Ejecutivo</h4>
+                    <p class="card-description">Incluye todos los planos, especificaciones y documentos necesarios para
+                        la construcción: instalaciones eléctricas, hidráulicas, estructurales y acabados.</p>
+                    <a href="#" class="card-cta">ver más →</a>
+                </div>
+            </div>
+            <div class="service-card card-3">
+                <div class="card-icon">
+                    <img src="assets/imgs/inicio/ico-house.webp" alt="icono de arquitectura">
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">Presupuesto y Contrato</h4>
+                    <p class="card-description">Aquí se calcula el costo total de la obra. Se desglosan materiales, mano
+                        de obra, tiempos y todo lo que se necesita para llevar a cabo el proyecto.</p>
+                    <a href="#" class="card-cta">ver más →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="proyectos-section">
-        <div class="proyectos-header">
-            <h2>PROYECTOS</h2>
-            <div class="categorias">
-                <a href="#" class="categoria-btn">Todos</a>
-                <a href="#" class="categoria-btn">Remodelaciones</a>
-                <a href="#" class="categoria-btn">Obras</a>
-                <a href="#" class="categoria-btn">Interiores</a>
-                <a href="#" class="categoria-btn">Exteriores</a>
+        <div class="proyectos-header-wrapper">
+            <div class="proyectos-header">
+                <h2>PROYECTOS</h2>
+                <div class="categorias">
+                    <a href="#" class="categoria-btn">Todos</a>
+                    <a href="#" class="categoria-btn">Remodelaciones</a>
+                    <a href="#" class="categoria-btn">Obras</a>
+                    <a href="#" class="categoria-btn">Interiores</a>
+                    <a href="#" class="categoria-btn">Exteriores</a>
+                </div>
             </div>
         </div>
 
-        <div class="proyectos-scroll">
-            <div class="proyectos-container">
-                <div class="proyecto-card">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop"
-                        alt="Proyecto 1" class="proyecto-imagen">
-                    <a href="#proyecto1" class="proyecto-cta">Ver más detalles</a>
+        <div class="proyectos-content-wrapper">
+            <div class="categoria-section">
+                <h3 class="categoria-titulo">Obras</h3>
+                <div class="proyectos-scroll">
+                    <div class="proyectos-container">
+                        <div class="proyecto-card scroll">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop"
+                                alt="Obra 1" class="proyecto-imagen">
+                            <a href="#obra1" class="proyecto-cta">Ver más detalles</a>
+                        </div>
+                        <div class="proyecto-card scroll">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"
+                                alt="Obra 2" class="proyecto-imagen">
+                            <a href="#obra2" class="proyecto-cta">Ver más detalles</a>
+                        </div>
+                        <div class="proyecto-card scroll">
+                            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&h=600&fit=crop"
+                                alt="Obra 3" class="proyecto-imagen">
+                            <a href="#obra3" class="proyecto-cta">Ver más detalles</a>
+                        </div>
+                        <div class="proyecto-card scroll">
+                            <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&h=600&fit=crop"
+                                alt="Obra 4" class="proyecto-imagen">
+                            <a href="#obra4" class="proyecto-cta">Ver más detalles</a>
+                        </div>
+                        <div class="proyecto-card scroll">
+                            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&h=600&fit=crop"
+                                alt="Obra 5" class="proyecto-imagen">
+                            <a href="#obra5" class="proyecto-cta">Ver más detalles</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="proyecto-card">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"
-                        alt="Proyecto 2" class="proyecto-imagen">
-                    <a href="#proyecto2" class="proyecto-cta">Ver más detalles</a>
+            </div>
+
+            <div class="categoria-section">
+                <h3 class="categoria-titulo">Remodelaciones</h3>
+                <div class="proyectos-scroll">
+                    <div class="proyectos-container">
+
+                        <div class="proyecto-card scroll">
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop"
+                                alt="Remodelación 1" class="proyecto-imagen">
+                            <a href="#remodelacion1" class="proyecto-cta">Ver más detalles</a>
+                        </div>
+                        <div class="proyecto-card scroll">
+                            <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=800&h=600&fit=crop"
+                                alt="Remodelación 3" class="proyecto-imagen">
+                            <a href="#remodelacion3" class="proyecto-cta">Ver más detalles</a>
+                        </div>
+                        <div class="proyecto-card scroll">
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop"
+                                alt="Remodelación 1" class="proyecto-imagen">
+                            <a href="#remodelacion1" class="proyecto-cta">Ver más detalles</a>
+                        </div>
+                        <div class="proyecto-card scroll">
+                            <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=800&h=600&fit=crop"
+                                alt="Remodelación 3" class="proyecto-imagen">
+                            <a href="#remodelacion3" class="proyecto-cta">Ver más detalles</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="proyecto-card">
-                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&h=600&fit=crop"
-                        alt="Proyecto 3" class="proyecto-imagen">
-                    <a href="#proyecto3" class="proyecto-cta">Ver más detalles</a>
-                </div>
-                <div class="proyecto-card">
-                    <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&h=600&fit=crop"
-                        alt="Proyecto 4" class="proyecto-imagen">
-                    <a href="#proyecto4" class="proyecto-cta">Ver más detalles</a>
-                </div>
-                <div class="proyecto-card">
-                    <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&h=600&fit=crop"
-                        alt="Proyecto 5" class="proyecto-imagen">
-                    <a href="#proyecto5" class="proyecto-cta">Ver más detalles</a>
+            </div>
+
+            <!-- INTERIORES Y EXTERIORES - Grid de 2 columnas -->
+            <div class="categoria-section">
+                <h3 class="categoria-titulo">Interiores y Exteriores</h3>
+                <div class="proyectos-grid-duo">
+                    <div class="proyecto-card">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop"
+                            alt="Interior 1" class="proyecto-imagen">
+                        <a href="#interior1" class="proyecto-cta">Ver más detalles</a>
+                    </div>
+                    <div class="proyecto-card">
+                        <img src="https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=800&h=600&fit=crop"
+                            alt="Exterior 1" class="proyecto-imagen">
+                        <a href="#exterior1" class="proyecto-cta">Ver más detalles</a>
+                    </div>
+                    <div class="proyecto-card">
+                        <img src="https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=800&h=600&fit=crop"
+                            alt="Interior 2" class="proyecto-imagen">
+                        <a href="#interior2" class="proyecto-cta">Ver más detalles</a>
+                    </div>
+                    <div class="proyecto-card">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop"
+                            alt="Exterior 2" class="proyecto-imagen">
+                        <a href="#exterior2" class="proyecto-cta">Ver más detalles</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="prototipos-section">
-        <div class="prototipos-content">
-            <div>
-                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=800&fit=crop"
-                    alt="Prototipos Arquitectónicos" class="prototipos-imagen">
-            </div>
-            <div class="prototipos-info">
-                <h2>¿No sabes qué construir? Tenemos la solución perfecta</h2>
-                <p>Nuestros prototipos arquitectónicos son proyectos completamente diseñados y listos para construir.
-                    Ideales para quienes buscan calidad, eficiencia y un resultado garantizado sin empezar desde cero.
-                </p>
-
-                <div class="pasos-container">
-                    <div class="paso">
-                        <div class="paso-numero">1</div>
-                        <div class="paso-texto">
-                            <h4>Elige tu prototipo</h4>
-                            <p>Explora nuestro catálogo de diseños</p>
-                        </div>
-                    </div>
-                    <div class="paso">
-                        <div class="paso-numero">2</div>
-                        <div class="paso-texto">
-                            <h4>Cotiza el proyecto</h4>
-                            <p>Recibe un presupuesto detallado</p>
-                        </div>
-                    </div>
-                    <div class="paso">
-                        <div class="paso-numero">3</div>
-                        <div class="paso-texto">
-                            <h4>Construye</h4>
-                            <p>Hacemos realidad tu proyecto</p>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="#prototipos" class="btn-primary">Explorar prototipos →</a>
-            </div>
-        </div>
-    </section>
-
-    
-
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-grid">

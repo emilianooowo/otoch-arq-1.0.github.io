@@ -1,59 +1,78 @@
-const hamburger = document.querySelector('.hamburger');
-const sideMenu = document.querySelector('.side-menu');
-const closeBtn = document.querySelector('.side-menu__close');
-const overlay = document.querySelector('.side-menu__overlay');
-const submenuToggle = document.querySelector('.side-menu__toggle');
-const submenu = document.querySelector('.side-menu__submenu');
+document.addEventListener("DOMContentLoaded", () => {
+    const slide = document.querySelector(".slide");
 
-hamburger.addEventListener('click', () => {
-    sideMenu.classList.add('active');
-    document.body.style.overflow = 'hidden';
-});
-
-const closeMenu = () => {
-    sideMenu.classList.remove('active');
-    document.body.style.overflow = '';
-};
-
-closeBtn.addEventListener('click', closeMenu);
-
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeMenu();
+    if (window.innerWidth > 992) {
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+            slide.style.transform = `translateY(${scrollY * 0.4}px`;
+        });
+    }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const heroSlider = document.getElementById("heroSlider");
-    const slides = document.querySelectorAll(".slide");
-    let current = 0;
+    const img = document.getElementById("aboutImage");
+    const buttons = document.querySelectorAll(".image-btn");
 
-    function showSlide(index) {
-        slides.forEach((s, i) => {
-            s.classList.toggle("active", i === index);
-        });
-        current = index;
-    }
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const src = btn.getAttribute("data-src");
+            img.src = src;
 
-    setInterval(() => {
-        const next = (current + 1) % slides.length;
-        showSlide(next);
-    }, 8000);
-
-    function parallaxEffect() {
-        if (window.innerWidth < 1024) return;
-
-        const scrolled = window.scrollY;
-        const sliderTop = heroSlider.offsetTop;
-        const sliderHeight = heroSlider.offsetHeight;
-
-        if (scrolled + window.innerHeight > sliderTop && scrolled < sliderTop + sliderHeight) {
-            const offset = (scrolled - sliderTop) * 0.4;
-            slides.forEach(slide => {
-                if (slide.classList.contains("active")) {
-                    slide.style.transform = `translateY(${offset}px)`;
-                }
+            buttons.forEach(b => {
+                b.classList.remove("active");
+                b.setAttribute("aria-pressed", "false");
             });
-        }
+            btn.classList.add("active");
+            btn.setAttribute("aria-pressed", "true");
+        });
+    });
+});
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function animateImages() {
+    const leftImg = document.querySelector('.left-image img');
+    const topImg = document.querySelector('.top-image img');
+
+    if (isInViewport(leftImg) && !leftImg.classList.contains('animate')) {
+        leftImg.classList.add('animate');
     }
 
-    window.addEventListener("scroll", parallaxEffect);
+    if (isInViewport(topImg) && !topImg.classList.contains('animate')) {
+        topImg.classList.add('animate');
+    }
+}
+
+window.addEventListener('load', animateImages);
+window.addEventListener('scroll', animateImages);
+window.addEventListener('resize', animateImages);
+
+const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Deja de observar una vez animado
+        }
+    });
+}, observerOptions);
+
+// Observar todas las tarjetas de proyecto
+document.addEventListener('DOMContentLoaded', () => {
+    const proyectoCards = document.querySelectorAll('.proyecto-card');
+    proyectoCards.forEach(card => {
+        observer.observe(card);
+    });
 });
