@@ -40,20 +40,20 @@
 .hero-title {
     opacity: 0;
     transform: translateZ(-50px);
-    animation: slideUp 1s ease-out 0.3s forwards;
+    animation: slideUpHero 1s ease-out 0.3s forwards;
 }
 
 .description {
     opacity: 0;
     transform: translateZ(50px);
-    animation: slideUp 1s ease-out 0.3s forwards;
+    animation: slideUpHero 1s ease-out 0.3s forwards;
 }
 
 .cta-buttons {
     display: flex;
     gap: 1rem;
     opacity: 0;
-    animation: slideDown 1s ease-out 0.7s forwards;
+    animation: slideDownHero 1s ease-out 0.7s forwards;
 }
 
 .btn-primary,
@@ -77,14 +77,14 @@
     transform: translateY(-2px);
 }
 
-@keyframes slideUp {
+@keyframes slideUpHero {
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@keyframes slideDown {
+@keyframes slideDownHero {
     to {
         opacity: 1;
         transform: translateY(0);
@@ -115,7 +115,9 @@
 .about-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 6rem 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 6rem;
 }
 
 .about-grid {
@@ -175,60 +177,72 @@
 .services-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 6rem;
-    display: flex;
-    align-items: center;
+    padding: 6rem 2rem;
 }
 
-.section-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 600px;
-    max-width: 350px;
-    flex-shrink: 0;
+.section-title {
+    margin-bottom: 3rem;
 }
 
-.card-container {
+.cards-scroll-container {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.cards-scroll {
     display: flex;
     gap: 30px;
     overflow-x: auto;
-    padding: 20px 30px;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 .service-card {
-    max-width: 350px;
-    height: 600px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-
-.card-content {
-    position: relative;
-    z-index: 2;
-    height: 100%;
+    max-width: 400px;
+    height: 400px;
+    border: 1px solid #e5e5e5;
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 20px;
-    padding: 30px;
+    justify-content: space-between;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    flex-shrink: 0;
+    opacity: 0;
+    transform: translateX(-50px);
 }
 
-.card-title {
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
-    align-self: flex-start;
+.service-card.animate {
+    animation: slideInFromLeft 0.6s ease forwards;
+}
+
+.service-card:nth-child(2).animate {
+    animation-delay: 0.15s;
+}
+
+.service-card:nth-child(3).animate {
+    animation-delay: 0.3s;
+}
+
+.service-card:nth-child(4).animate {
+    animation-delay: 0.45s;
+}
+
+@keyframes slideInFromLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.service-card:hover {
+    border-color: #000;
 }
 
 .card-icon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 3;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
 }
 
 .card-icon img {
@@ -237,50 +251,148 @@
     object-fit: contain;
 }
 
-.card-description {
-    margin-top: auto;
-    align-self: flex-start;
-    position: relative;
-    display: inline-block;
+.card-main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.card-cta {
-    align-self: flex-start;
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px solid #000;
+.card-title {
+    margin: 20px 0;
+}
+
+.card-button {
+    align-self: flex-end;
+    background: #000;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card-button:hover {
+    transform: translateX(4px);
+}
+
+.view-all-card {
+    min-width: 400px;
+    height: 400px;
+    padding: 30px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+}
+
+.view-all-card:hover {
+    background: #333;
+}
+
+.view-all-content:hover {
+    text-decoration: underline;
+}
+
+.extras-subtitle {
+    margin-bottom: 2rem;
+}
+
+.extras-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.extra-item {
+    max-width: 450px;
+    border: 1px solid #e5e5e5;
+    padding: 25px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.extra-item.animate {
+    animation: slideInFromLeft 0.6s ease forwards;
+}
+
+.extra-item:nth-child(2).animate {
+    animation-delay: 0.1s;
+}
+
+.extra-item:nth-child(3).animate {
+    animation-delay: 0.2s;
+}
+
+.extra-item:nth-child(4).animate {
+    animation-delay: 0.3s;
+}
+
+.extra-item:nth-child(5).animate {
+    animation-delay: 0.4s;
+}
+
+.extra-item:hover {
+    border-color: #000;
+}
+
+.extra-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.extra-toggle {
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+.extra-expanded {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+}
+
+.extra-item.active .extra-expanded {
+    max-height: 200px;
+    margin-top: 20px;
 }
 
 .proyectos-section {
     background-color: #1a1a1a;
 }
 
-.proyectos-header-wrapper {
+.proyectos-wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .proyectos-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    text-align: center;
     color: #fff;
 }
 
 .categorias {
     display: flex;
     gap: 30px;
-    flex-wrap: wrap;
-}
-
-.categoria-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px 0;
-    position: relative;
+    margin-top: 1.5rem;
 }
 
 .categoria-btn:hover {
@@ -288,7 +400,7 @@
 }
 
 .proyectos-content-wrapper {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem 6rem;
 }
