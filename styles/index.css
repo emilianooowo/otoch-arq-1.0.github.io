@@ -27,11 +27,12 @@
 .hero-bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 3rem;
+    padding-top: 2rem;
     align-items: center;
 }
 
 .hero-right {
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 2rem;

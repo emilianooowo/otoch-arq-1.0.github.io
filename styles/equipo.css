@@ -1,0 +1,240 @@
+.perfiles-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 100px auto 0 auto;
+}
+
+.perfiles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.perfil-card {
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfiles-grid:hover .perfil-card {
+    opacity: 0.4;
+}
+
+.perfiles-grid .perfil-card:hover {
+    opacity: 1 !important;
+    border-color: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.perfil-imagen {
+    width: 100%;
+    height: 200px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+}
+
+.perfil-contenido {
+    padding: 0 20px;
+}
+
+.perfil-nombre {
+    margin: 20px 0;
+}
+
+.perfil-puesto {
+    color: #666;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.perfil-contacto {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 30px 0;
+}
+
+.perfil-telefono,
+.perfil-correo {
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.perfil-telefono:hover,
+.perfil-correo:hover {
+    color: #0073ff;
+}
+
+.perfil-redes {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.perfil-red-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.perfil-red-icon i {
+    font-size: 1.2rem;
+}
+
+.perfil-red-icon.linkedin {
+    background-color: #0077b5;
+}
+
+.perfil-red-icon.whatsapp {
+    background-color: #25d366;
+}
+
+@media (max-width: 1024px) {
+    .perfiles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .perfiles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-info-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.form-info-left h3 {
+    margin-bottom: 40px;
+}
+
+.form-info-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid #e5e5e5;
+    padding: 1.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-info-form:hover,
+.form-info-ubicacion:hover {
+    border-color: #000;
+}
+
+.form-info-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-info-input,
+.form-info-select,
+.form-info-textarea {
+    padding: 12px 0;
+    font-size: 1rem;
+    font-family: inherit;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    transition: border-color 0.3s ease;
+}
+
+.form-info-input::placeholder,
+.form-info-select,
+.form-info-textarea::placeholder {
+    color: #999;
+}
+
+.form-info-input:focus,
+.form-info-select:focus,
+.form-info-textarea:focus {
+    outline: none;
+    border-bottom-color: var(--color-verde);
+}
+
+.form-info-textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+.form-info-helper {
+    color: #999;
+}
+
+.form-info-button {
+    padding: 1rem 2.5rem;
+    color: white;
+    background: var(--color-verde);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.form-info-button:hover {
+    transform: translateY(-4px);
+}
+
+.form-info-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-info-ubicacion {
+    padding: 30px;
+    transition: border-color 0.3s ease;
+    border: 1px solid #e5e5e5;
+}
+
+.form-info-ubicacion h4 {
+    margin-bottom: 20px;
+}
+
+.form-info-direccion p {
+    margin-bottom: 6px;
+}
+
+.form-info-contacto-link {
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.form-info-contacto-link:hover {
+    color: #0073ff;
+}
+
+.form-info-imagen {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #e5e5e5;
+}
+
+@media (max-width: 768px) {
+    .form-info-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
